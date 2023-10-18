@@ -1,7 +1,12 @@
+import TopBar from "../components/topBar"
+
 const Home = () => {
-   return(
-        <h1>Home</h1>
-   )
+    return(
+        <>
+            <TopBar arrayOfComponents={[0, 3]} />
+            <h1>Home</h1>
+        </>
+    )
 }
 
 export default Home;
