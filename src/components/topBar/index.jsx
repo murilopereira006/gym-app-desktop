@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types'
 import ClickableIconsWithValues from '../clickableIconsWithValues'
+import ProfileIcon from '../profileIcon'
 import { ContainerNavBar } from './styles'
 
 const TopBar = ({ arrayOfComponents }) => {
@@ -12,6 +13,7 @@ const TopBar = ({ arrayOfComponents }) => {
                     )
                 })
             }
+            <ProfileIcon />
         </ContainerNavBar>
     )
 }
