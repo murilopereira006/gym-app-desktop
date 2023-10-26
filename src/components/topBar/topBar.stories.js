@@ -1,4 +1,4 @@
-import TopBar from './index'
+import { TopBar } from './index'
 
 export default {
     component: TopBar,

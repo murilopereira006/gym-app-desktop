@@ -1,8 +1,8 @@
-import clickableIconsWithValues from './index'
+import { ProfileIcon } from './index'
 
 export default {
-    component: clickableIconsWithValues,
-    title: 'clickableIconsWithValues',
+    component: ProfileIcon,
+    title: 'ProfileIcon',
     argTypes: {
         photo: {
             defaultValue: 'https://images.emojiterra.com/google/noto-emoji/unicode-15/animated/1f525.gif',
@@ -11,4 +11,4 @@ export default {
     }
 }
 
-export const Default = (args) => <clickableIconsWithValues {...args} />
+export const Default = (args) => <ProfileIcon {...args} />

@@ -1,8 +1,8 @@
-import clickableIconsWithValues from './index'
+import { ClickableIconsWithValues } from './index'
 
 export default {
-    component: clickableIconsWithValues,
-    title: 'clickableIconsWithValues',
+    component: ClickableIconsWithValues,
+    title: 'ClickableIconsWithValues',
     argTypes: {
         svgIcon: {
             defaultValue: 'https://images.emojiterra.com/google/noto-emoji/unicode-15/animated/1f525.gif',
@@ -19,4 +19,4 @@ export default {
     }
 }
 
-export const Default = (args) => <clickableIconsWithValues {...args} />
+export const Default = (args) => <ClickableIconsWithValues {...args} />
