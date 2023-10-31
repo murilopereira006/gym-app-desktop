@@ -5,7 +5,17 @@ const Login = () => {
         <>
             <header>
                 <img src="" alt="logo" />
-                <ButtonGeneric>Log in</ButtonGeneric>
+                <ButtonGeneric
+                    outer={true}
+                    outerWeight={1}
+                    outerStyle={'solid'}
+                    outerColor={'red'}
+                    outerPadding={40}
+                    padding={'10px 5px'}
+                    margin={'10px'}
+                >
+                    Log in
+                </ButtonGeneric>
                 <ButtonGeneric>Sing Up</ButtonGeneric>
             </header>
             <main>
