@@ -1,6 +1,19 @@
+import ButtonGeneric from "../components/buttonGeneric";
+
 const Login = () => {
     return (
-        <h1>Login</h1>
+        <>
+            <header>
+                <img src="" alt="logo" />
+                <ButtonGeneric>Log in</ButtonGeneric>
+                <ButtonGeneric>Sing Up</ButtonGeneric>
+            </header>
+            <main>
+                <h1>Bora treinar!</h1>
+                <span>Faca o login na sua academia</span>
+            </main>
+            <footer></footer>
+        </>
     )
 }
 
