@@ -16,7 +16,11 @@ const Login = () => {
                 >
                     Log in
                 </ButtonGeneric>
-                <ButtonGeneric>Sing Up</ButtonGeneric>
+                <ButtonGeneric
+                    width={'300px'}
+                >
+                    Sing Up
+                </ButtonGeneric>
             </header>
             <main>
                 <h1>Bora treinar!</h1>
