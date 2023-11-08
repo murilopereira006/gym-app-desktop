@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<svg data-name="Layer 1" height="200" id="Layer_1" viewBox="0 0 200 200" width="200"
+    stroke="currentColor" fill="currentColor"
+    xmlns="http://www.w3.org/2000/svg">
+    <title />
+    <path
+        d="M85,100a15,15,0,1,0,15-15A15,15,0,0,0,85,100Zm-55,0A15,15,0,1,0,45,85,15,15,0,0,0,30,100Zm110,0a15,15,0,1,0,15-15,15,15,0,0,0-15,15Z" />
+</svg>
