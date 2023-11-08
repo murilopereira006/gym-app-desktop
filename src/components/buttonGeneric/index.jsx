@@ -1,5 +1,5 @@
 import PropTypes from "prop-types"
-import { OuterWrapper, Container, Text } from "./styles"
+import { OuterWrapper, Container, TextStyled } from "./styles"
 import Colors from "../../assets/colors"
 import { FontFamily, FontSize, FontWeight, FontStyles } from "../../assets/typography"
 
@@ -10,7 +10,7 @@ const ButtonGeneric = ({
     bgColor = Colors.Primary,
     margin,
     padding,
-    border,
+    border = 'none',
     borderColor,
     borderWeight,
     borderRadius,
@@ -19,15 +19,14 @@ const ButtonGeneric = ({
     fontSize = FontSize.Default,
     fontWeight = FontWeight.Medium,
     fontStyles = FontStyles.Default,
-    outer,
-    outerWeight = '1px',
+    outer = false,
+    outerWeight = 1,
     outerStyle = 'solid',
-    outerPadding,
+    outerPadding = 0,
     outerColor
 }) => {
 
     const outerProps = {
-        outer: outer,
         outerWeight: outerWeight,
         outerStyle: outerStyle,
         outerColor: outerColor ? outerColor : bgColor,
@@ -55,29 +54,28 @@ const ButtonGeneric = ({
         fontStyles: fontStyles,
     };
 
-    if (outer) {
+    if (outer !== false) {
         return (
             <OuterWrapper {...outerProps}>
                 <Container {...containerProps}>
-                    <Text {...textProps}>
+                    <TextStyled {...textProps}>
                         {children}
-                    </Text>
+                    </TextStyled>
                 </Container>
             </OuterWrapper>
         );
     } else {
         return (
             <Container {...containerProps}>
-                <Text {...textProps}>
+                <TextStyled {...textProps}>
                     {children}
-                </Text>
+                </TextStyled>
             </Container>
         );
     }
 };
 
 export default ButtonGeneric;
-
 
 ButtonGeneric.propTypes = {
     children: PropTypes.string.isRequired,
@@ -86,7 +84,7 @@ ButtonGeneric.propTypes = {
     bgColor: PropTypes.string,
     margin: PropTypes.string,
     padding: PropTypes.string,
-    border: PropTypes.oneOf['solid', 'dotted', 'dashed', 'double', 'groove', 'ridge', 'inset', 'outset', 'none'],
+    border: PropTypes.oneOf(['solid', 'dotted', 'dashed', 'double', 'groove', 'ridge', 'inset', 'outset', 'none']),
     borderColor: PropTypes.string,
     borderWeight: PropTypes.number,
     borderRadius: PropTypes.number,
@@ -96,8 +94,8 @@ ButtonGeneric.propTypes = {
     fontWeight: PropTypes.string,
     fontStyles: PropTypes.string,
     outer: PropTypes.bool,
-    outerStyle: PropTypes.oneOf['solid', 'dotted', 'dashed', 'double', 'groove', 'ridge', 'inset', 'outset', 'none'],
+    outerStyle: PropTypes.oneOf(['solid', 'dotted', 'dashed', 'double', 'groove', 'ridge', 'inset', 'outset', 'none']),
     outerWeight: PropTypes.number,
     outerColor: PropTypes.string,
-    outerPadding: PropTypes.string,
+    outerPadding: PropTypes.number,
 };

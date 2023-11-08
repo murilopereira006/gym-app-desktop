@@ -3,8 +3,8 @@ import styled from 'styled-components'
 export const OuterWrapper = styled.div`
     width: fit-content;
     height: fit-content;
-    padding: ${props => props.outerPadding}px;
-    border-radius: ${props => (props.borderRadius + props.outerPadding)}px;
+    padding: ${props => props.outerPadding ? props.outerPadding : 0}px;
+    border-radius: ${props => props.outerPadding ? (props.borderRadius + props.outerPadding) : 0}px;
     color: transparent;
     background-color: transparent;
     border: ${props => props.outerWeight}px ${props => props.outerStyle} ${props => props.outerColor};
@@ -25,7 +25,7 @@ export const Container = styled.div`
     cursor: pointer;
 `;
 
-export const Text = styled.span`
+export const TextStyled = styled.span`
     font-family: ${props => props.fontFamily};
     font-size: ${props => props.fontSize};
     font-weight: ${props => props.fontWeight};
